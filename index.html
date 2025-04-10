@@ -1,7 +1,499 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta property="og:description" content="The personal website of Lazer-Bunny ˚ʚ♡ɞ˚">
+      <meta property="og:title" content="Lazer-Bunny">
+      <meta property="og:image" content="/Art_Storage/ChibiLazer.png">
+      <title>Lazer-Bunny's Website ˚ʚ♡ɞ˚</title>
+      <link href="newstyle.css" rel="stylesheet" type="text/css" media="all">
+      <link rel="icon" type="image/gif" href="/Decorations/MyMelodyFavicon.gif">
+<script>
+// <![CDATA[
+var speed=100; // speed colours change, 1 second = 1000
+var glow=3; // can be set from '0' for no glow, to 10
+var raincol=new Array("#FFDAED", "#F896C8", "#70E6FD"); // change the colours if you want to
+var alink="https://lazer-bunny.neocities.org"; // page to link text to (set to ="" for no link)
+
+/****************************
+*    Rainbow Text Effect    *
+*(c)2003-13 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var rainbow, raintxt, raincnt=0;
+
+function addLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addLoadEvent(regenbogen);
+
+function regenbogen() { if (document.getElementById) {
+  var i, rainbeau;
+  rainbow=document.getElementById("rainbow");
+  raintxt=rainbow.firstChild.nodeValue;
+  while (rainbow.childNodes.length) rainbow.removeChild(rainbow.childNodes[0]);
+  for (i=0; i<raintxt.length; i++) {
+    rainbeau=document.createElement("span");
+    rainbeau.setAttribute("id", "rain"+i);
+    rainbeau.appendChild(document.createTextNode(raintxt.charAt(i)));
+    if (alink) {
+      rainbeau.style.cursor="pointer";
+      rainbeau.onclick=function() { top.location.href=alink; }
+    }
+    rainbow.appendChild(rainbeau);
+  }
+  rainbow=setInterval ("raining()", speed);
+}}
+
+function raining() {
+  var i, c;
+  for (i=0; i<raintxt.length; i++) {
+    c=raincol[(i+raincnt)%raincol.length];
+    document.getElementById("rain"+i).style.color=c;
+	if (glow) document.getElementById("rain"+i).style.textShadow=c+" 0px 0px "+glow+"px";
+  }
+  raincnt++;
+}
+// ]]>
+</script>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<div class="main">
+  <div id="header" class="boxStyle"> 
+    <div id="fairy">
+      <h1 class="title"><span id="rainbow">Lazer-Bunny</span></h1>
+    </div>
+  </div>
+  <div id="indexGrid"> 
+    <div id="indexNavigation" class="boxStyle">
+      <div class="SectionTab">
+				<img class="SectionIcon" src="/Decorations/DecoBubble.gif" alt=""> <div class="SectionTitle">Navigation</div>
+				  <div class="SectionButtonsDisplay">
+  					<div class="SectionButtons">-</div>
+  					<div class="SectionButtons">□</div>
+  					<div class="SectionButtons">x</div>
+				  </div>
+      </div>
+        <div class="content">
+            <button onclick="window.location.href='/Art';"><img src="/Decorations/DecoArrow.gif" alt="">Art Gallery</button>
+            <button onclick="window.location.href='/Characters/Directory';"><img src="/Decorations/DecoArrow.gif" alt="">My OCs</button>
+            <button onclick="window.location.href='/Graphics';"><img src="/Decorations/DecoArrow.gif" alt="">Graphics</button>
+            <button onclick="window.location.href='/Resources';"><img src="/Decorations/DecoArrow.gif" alt="">Resources</button>
+            <div class="Subsection">
+    				  <img class="SectionIcon" src="/Decorations/DecoStars.gif" alt=""> <div class="SectionTitle">Personal</div>
+      			</div>
+            <button onclick="window.location.href='/About';"><img src="/Decorations/DecoArrow.gif" alt="">About</button>
+            <button onclick="window.location.href='/Moodboard';"><img src="/Decorations/DecoArrow.gif" alt="">Moodboard</button>
+          <div class="Subsection">
+  				  <img class="SectionIcon" src="/Decorations/DecoStars.gif" alt=""> <div class="SectionTitle">Shrines</div>
+    			</div>
+            <button onclick="window.location.href='/Shrines/CookieRun';"><img src="/Decorations/DecoArrow.gif" alt="">Cookie Run</button>
+            <button onclick="window.location.href='/Shrines/Pokemon';"><img src="/Decorations/DecoArrow.gif" alt="">Pokemon</button>
+            <button onclick="window.location.href='/Shrines/DRDT';"><img src="/Decorations/DecoArrow.gif" alt="">Despair Time</button>
+            <button onclick="window.location.href='/Shrines/Lyrics';"><img src="/Decorations/DecoArrow.gif" alt="">Song Lyrics</button>
+          <div class="Subsection">
+  				  <img class="SectionIcon" src="/Decorations/DecoStars.gif" alt=""> <div class="SectionTitle">Outgoing</div>
+    			</div>
+            <button onclick="window.location.href='https://tinyurl.com/43sm22hx';"><img src="/Decorations/DecoArrow.gif" alt="">Guestbook</button>
+            <button onclick="window.location.href='/GuestbookArchive';"><img src="/Decorations/DecoArrow.gif" alt="">Old Guestbook</button>
+            <button onclick="window.location.href='https://neocities.org/site/lazer-bunny';"><img src="/Decorations/DecoArrow.gif" alt="">Site Profile</button>
+            <button onclick="window.location.href='https://lazer-bunny.carrd.co';"><img src="/Decorations/DecoArrow.gif" alt="">My Socials</button>
+        </div>
+    </div>
+    <div id="indexBody" class="boxStyle"> 
+      <div class="SectionTab">
+				<img class="SectionIcon" src="/Decorations/DecoBubble.gif" alt=""> <div class="SectionTitle">Welcome</div>
+				<div class="SectionButtonsDisplay">
+  				<div class="SectionButtons">-</div>
+					<div class="SectionButtons">□</div>
+					<div class="SectionButtons">x</div>
+				</div>
+			</div>
+			  <div id ="indexBodyGrid">
+			    <div id ="indexBodyMain" class="boxStyle">
+			      <div class="content">
+			        <h2 class="indexHeading">Welcome to Lazer-Bunny's site!</h2>
+			        <hr>
+			        <img src="https://file.garden/ZRd9Ymec0nPTUKfu/Deco/Sticker_Melody_Chair" class="pagedoll" style="float: right; height: 180px" alt="">
+              <p>Hello there, and welcome to <span style="color: #70E6FD">lazer-bunny.neocities.org</span>! I made this site because I wanted somewhere new to share my art without the hassle of posting to social media, but you'll find I share many other things here too, like pages dedicated to my original characters and my long-term interests. ପ(๑•ᴗ•๑)ଓ ♡<br>This site is not geared towards mobile users, as this is a passion project and I still consider myself an amateur webmaster. Sorry for the inconvenience.</p>
+              <hr>
+			        <img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/My_Button_Hosted_by_Neocities" class="pagedoll" style="display:block; margin-left: auto; margin-right: auto" alt="">
+            </div>
+          </div>
+          <div id="indexStatus">
+            <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=lazerbunny" defer></script>
+            <div class="tooltip">★ Credit
+              <span class="tooltiptext">Icon by <a target="_blank" href="https://twitter.com/alcorchannel">AlcorChannel</a> Commissioned by <a target="_blank" href="https://twitter.com/haruthesuwan">Haru</a></span>
+            </div>
+            <div id="statusIcon"></div>
+          </div>
+          <div id="indexButton" class="boxStyle">
+            <div class="SectionTab">
+              <img class="SectionIcon" src="/Decorations/DecoBubble.gif" alt=""> <div class="SectionTitle">Button</div>
+              <div class="SectionButtonsDisplay">
+  					    <div class="SectionButtons">-</div>
+      					<div class="SectionButtons">□</div>
+      					<div class="SectionButtons">x</div>
+              </div>
+            </div>
+            <div class="content">
+              <a target="_blank" href="https://i.imgur.com/PTTYSwz.gif"><img src="https://i.imgur.com/PTTYSwz.gif" class="pagedoll" alt="Lazer-Bunny 99x31 site button"></a>
+              <p class="marginzero">Let me know if you use it so I can return the favor!</p>
+            </div>
+          </div>
+        </div>
+    </div> 
+    <div id="indexUpdates" class="boxStyle">
+      <div class="SectionTab">
+				<img class="SectionIcon" src="/Decorations/DecoBubble.gif" alt=""> <div class="SectionTitle">Updates</div>
+				<div class="SectionButtonsDisplay">
+  				<div class="SectionButtons">-</div>
+					<div class="SectionButtons">□</div>
+					<div class="SectionButtons">x</div>
+				</div>
+			</div>
+      <div class="content">
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[03/07/25]</span> Added marquee to index, lots of small edits to pages.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[03/05/25]</span> <a href="/Shrines/DRDT">Danganronpa: Despair Time shrine</a> Finished.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[03/02/25]</span> Re-arranged listings and cliques.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[02/08/25]</span> Lots of small edits to pages, joined <a target="_blank" href="https://evehibi.nekoweb.org/ckwr/">Cookie Run Webring</a></p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[01/02/25]</span> All OC pages updated, <a href="/Characters/Directory">OC Directory</a> updated, new art.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[09/18/24]</span> All OC pages updated, new art.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[08/23/24]</span> All OC pages updated.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[08/13/24]</span> <a href="/Moodboard">Moodboard</a> created.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[08/05/24]</span> Re-arranged index, Artfight attacks added to <a href="/Art">Art Gallery</a>.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[06/09/24]</span> <a href="/GuestbookArchive">Guestbook Archive</a> created.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[06/08/24]</span> New <a href="/Characters/Directory">OC Directory</a>.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[03/18/24]</span> New <a href="/Art">Art Gallery</a>.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[03/13/24]</span> Created a <a href="https://lazer-bunny.123guestbook.com">Guestbook</a></p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[03/12/24]</span> New <a href="/Resources">Resources</a>.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[03/05/24]</span> Joined <a target="_blank" href="https://womenoftheinternet.neocities.org">Women of the Internet Webring</a>.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[02/14/24]</span> New <a href="/Graphics">Graphics</a>.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[02/09/24]</span> New <a href="/About">About Me</a>.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[02/04/24]</span> New Index</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[11/22/23]</span> Joined <a target="_blank" href="https://sephiria.com/gifts/claim">Pokemon Claim Clique</a>.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[10/17/23]</span> Visual upgrades. Joined <a target="_blank" href="https://webring.adilene.net">VOCALOID Webring</a>.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[10/09/23]</span> Visual upgrades. Files re-hosted.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[07/05/23]</span> <a href="/Shrines/CookieRun">Cookie Run shrine</a> finished.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[05/09/23]</span> Rearranged a few pages. Joined <a target="_blank" href="https://webring.koinuko.pink">Self-Insert Webring</a>.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[04/11/23]</span> <a href="/Shrines/Lyrics">Lyrics shrine</a> Finished. Joined <a target="_blank" href="https://ophanimkei.com/media/RPGMaker">RPG Maker Webring</a>.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[04/08/23]</span> <a href="/Shrines/Pokemon">Pokemon shrine</a> Finished.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[04/01/23]</span> Visual upgrades.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[01/11/23]</span> Joined <a target="_blank" href="https://dokodemo.neocities.org/pokering">Pokéring</a>.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[01/10/23]</span> Added section for webrings and a webcam to index.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[12/02/22]</span> <a href="/Resources">Resources</a> page Finished. Added Status Cafe to index. Small visual changes.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[09/16/22]</span> <a href="/About">About Me</a>, <a href="/Art">Art Gallery</a>, <a href="/Graphics">Stamp Collection</a> pages Finished.</p>
+        <hr>
+        <p class="marginzero"><img src="/Decorations/DecoNote.gif" alt=""> <span class="highlightmark">[09/01/22]</span> Site Created. (⌒▽⌒)</p>
+      </div>
+    </div>
+    <div id="indexFanlists" class="boxStyle">
+      <div class="SectionTab">
+				<img class="SectionIcon" src="/Decorations/DecoBubble.gif" alt=""> <div class="SectionTitle">Cliques</div>
+				<div class="SectionButtonsDisplay">
+  				<div class="SectionButtons">-</div>
+					<div class="SectionButtons">□</div>
+					<div class="SectionButtons">x</div>
+				</div>
+			</div>
+			<div class="content">
+        <!-- Made by a Girl -->
+        <a target="_blank" href="https://lovesick.cafe/grrrl"><img class="cliques" alt="Made by a Girl Clique" src="Art_Storage/Clique_Girl.png"></a>
+        <!-- Pixel Cliques -->
+        <div>
+          <a target="_blank" href="https://ac.kuchiki.net"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Clique_Stitches" class="cliques" title="pixel friends | Stitches" alt="Stitches" style="height: 20px"></a>
+          <a target="_blank" href="https://pkmn.caelestis.nu"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Clique_Stufful" class="cliques" title="I Choose You! | Stufful" alt="Stufful"></a>
+          <a target="_blank" href="https://oodlecat.meowandsparkle.party/alive-enough/cliques.html"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Clique_DSi" class="cliques" title="the touch generation :: DSi" alt="DSi"></a>
+          <a target="_blank" href="https://mewchara.neocities.org/everafter"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Clique_EAH" class="cliques" alt="Ever After High Clique" style="height: 20px"></a>
+          <a target="_blank" href="https://cupped-expressions.net/mamegoma/index.php"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Clique_Mamegoma" class="cliques" alt="Mamegoma"></a>
+          <a target="_blank" href="https://lovesick.cafe/esoterica/angelnumbers"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Clique_Angel_Number_111" class="cliques" title="Angel Numbers // 111" alt="111"></a>
+        </div>
+        <hr>
+        <!-- Listings -->
+        <a href="https://allyratworld.com/cafe/rose" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Cafe_Rose" class="fanlistingButton" alt="Cafe Rose 50x50"></a>
+        <a href="http://fan.greenhype.net/squishmallows" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Squishmallows" class="fanlistingButton" alt="Squishmallows Fanlisting 50x50"></a>
+        <a href="https://hellokitty.i-heart-you.net" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Hello_Kitty" class="fanlistingButton" alt="Hello Kitty Fanlisting 50x50"></a>
+        <a href="http://hellokitty.ravenbeauty.net/mymelody" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_MyMelody" class="fanlistingButton" alt="My Melody Fanlisting 50x50"></a>
+        <a href="http://hellokitty.ravenbeauty.net/kuromi" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Kuromi" class="fanlistingButton" alt="Kuromi Fanlisting 50x50"></a>
+        <a href="https://fan.wings.nu/pompompurin/index.php" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Pompompurin" class="fanlistingButton" alt="Pompompurin Fanlisting 50x50"></a>
+        <a href="https://fan.wings.nu/cinnamoroll/join.php" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Cinnamoroll" class="fanlistingButton" alt="Cinnamoroll Fanlisting 50x50"></a>
+        <a href="http://hellokitty.ravenbeauty.net/twinstars" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Little_Twin_Stars" class="fanlistingButton" alt="Little Twin Stars Fanlisting 50x50"></a>
+        <a href="https://fanlistings.melankorin.net/vocaloid" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Vocaloid" class="fanlistingButton" alt="Vocaloid Fanlisting 50x50"></a>
+        <a href="https://mikufan3939.neocities.org/fanlist/home" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Miku" class="fanlistingButton" alt="Hatsune Miku Fanlisting 50x50"></a>
+        <a href="https://pkmn.hoshi.nu/diancie/index.php" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Diancie" class="fanlistingButton" alt="Diancie Fanlisting 50x50"></a>
+        <a href="https://pkmn.kirai.org/0282" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Gardevoir" class="fanlistingButton" alt="Gardevoir Fanlisting 50x50"></a>
+        <a href="http://fan.winterlantern.net/sylveon" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Sylveon" class="fanlistingButton" alt="Sylveon Fanlisting 50x50"></a>
+        <a href="https://pkmn.hoshi.nu/buneary/" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Buneary" class="fanlistingButton" alt="Buneary Fanlisting 50x50"></a>
+        <a href="https://pkmn.hoshi.nu/lopunny/index.php" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Lopunny" class="fanlistingButton" alt="Lopunny Fanlisting 50x50"></a>
+        <a href="https://pkmn.kirai.org/arven" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Arven" class="fanlistingButton" alt="Arven Fanlisting 50x50"></a>
+        <a href="https://kirai.org/piers" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Piers" class="fanlistingButton" alt="Piers Fanlisting 50x50"></a>
+        <a href="https://www.pirate-queen.net/danganronpa/index.php" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Danganronpa" class="fanlistingButton" alt="Danganronpa Fanlisting 50x50"></a>
+        <a href="http://www.marheavenj.net/chiakichan" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Chiaki" class="fanlistingButton" alt="Nanami Chiaki Fanlisting 50x50"></a>
+        <a href="https://ibuki.timestranger.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Ibuki" class="fanlistingButton" alt="Ibuki Mioda Fanlisting 50x50"></a>
+        <a href="https://mikan.timestranger.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Mikan" class="fanlistingButton" alt="Mikan Tsumiki Fanlisting 50x50"></a>
+        <a href="https://www.marheavenj.net/akamatsu" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Kaede" class="fanlistingButton" alt="Kaede Akamatsu Fanlisting 50x50"></a>
+        <a href="https://www.marheavenj.net/momota" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Kaito" class="fanlistingButton" alt="Kaito Momota Fanlisting 50x50"></a>
+        <a href="http://sakura.nu/doki/index.php" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_DDLC" class="fanlistingButton" alt="Doki Doki Literature Club Fanlisting 50x50"></a>
+        <a href="https://fan.hopeslair.haliya.net/fl/kirby/index.php" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Kirby" class="fanlistingButton" alt="Kirby Fanlisting 50x50"></a>
+        <a href="https://fruitsbasket.i-heart-you.net/codes.php" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Fruits_Basket" class="fanlistingButton" alt="Fruits Basket Fanlisting 50x50"></a>
+        <a href="https://love.luxstella.org/tohru" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Tohru" class="fanlistingButton" alt="Tohru Honda Fanlisting 50x50"></a>
+        <a href="https://kyou.nu/kyou" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Kyou" class="fanlistingButton" alt="Kyou Sohma Fanlisting 50x50"></a>
+        <a href="http://kxt.aking-mahal.net/kxt.php" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Tohru_x_Kyou" class="fanlistingButton" alt="Tohru x Kyou Fanlisting 50x50"></a>
+        <a href="https://michiru.org/spyxfamily" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Spy_X_Family" class="fanlistingButton" alt="Spy x Family Fanlisting 50x50"></a>
+        <a href="https://www.marheavenj.net/anya" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Anya" class="fanlistingButton" alt="Anya Forger Fanlisting 50x50"></a>
+        <a href="https://dandadan.i-heart-you.net" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Dandadan" class="fanlistingButton" alt="Dandadan Fanlisting 50x50"></a>
+        <a href="https://saikik.deathwhisper.com" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Saiki_K" class="fanlistingButton" alt="Saiki K Fanlisting 50x50"></a>
+        <a href="http://frshery.info/genos" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Genos" class="fanlistingButton" alt="Genos Fanlisting 50x50"></a>
+        <a href="https://firaga.org/howl" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Howl" class="fanlistingButton" alt="Howl Fanlisting 50x50"></a>
+        <a href="https://fanimated.net/mylittlepony" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_MLP" class="fanlistingButton" alt="My Little Pony Fanlisting 50x50"></a>
+        <a href="https://inkcaps.neocities.org/gf" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Gravity_Falls" class="fanlistingButton" alt="Gravity Falls Fanlisting 50x50"></a>
+        <a href="http://thirteenthfloor.altervista.org/bunnies/index.php" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Bunnies" class="fanlistingButton" alt="Bunnies Fanlisting 50x50"></a>
+        <a href="http://www.royal-drama.net/stuffedbunnyrabbits" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Stuffed_Bunnies" class="fanlistingButton" alt="Stuffed Bunnies Fanlisting 50x50"></a>
+        <a href="https://noble-scarlet.net/monsterhigh/dolls/index.php" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_MH_Dolls" class="fanlistingButton" alt="Monster High Dolls Fanlisting 50x50"></a>
+        <a href="http://fan.ravenbeauty.net/everafter" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Ever_After_High" class="fanlistingButton" alt="Ever After High Fanlisting 50x50"></a>
+        <a href="http://fan.ravenbeauty.net/lalaloopsy" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Fanlist_Lalaloopsy" class="fanlistingButton" alt="Lalaloopsy Fanlisting 50x50"></a>
+        <hr>
+        <!-- Text Cliques -->
+        <div class="textclique"><a target="_blank" href="https://sephiria.com/gifts/claim.html"><img height="100" class="cliques" src="https://file.garden/ZRd9Ymec0nPTUKfu/Deco/Card_Magearna" alt="Magearna Pokemon Card"></a><br>My TCG partner // <strong><a target="_blank" href="https://sephiria.com/gifts/claim.html">Magearna</a></strong></div>
+        <div class="textclique"><a target="_blank" href="https://emocowboy.neocities.org/home/cliques/pokemon">favorite</a> <img src="https://i.imgur.com/bLxwyvd.png"> Stufful</div>
+        <div class="textclique"><a target="_blank" href="https://jubiland.neocities.org/cliques#sanrioluvr">sanrio luvr</a> <img src="https://file.garden/ZRd9Ymec0nPTUKfu/Deco/Favicon_My_Melody_Smile"> My Melody</div>
+        <div class="textclique"><a href="http://cliqued.wings.nu/" target="_blank">my jam!!</a> <img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Clique_Jam"> Heavenly You</div>
+        <div class="textclique"><a href="https://angeleyesprings.neocities.org/giftShop" target="_blank"><img class="cliques" src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Clique_Fuwa_Cancer" title="Zodiac Fuwa Claim Clique // Cancer" alt="Zodiac Fuwa Claim Clique Cancer"></a></div>
+        <!-- End-->
+      </div>
+    </div>
+    <div id="indexDecoButtons" class="boxStyle">
+      <div id="marquee">
+        <div id="marquee-inner">
+        <span>
+            <a target="_blank" href="https://web.archive.org/web/20220531232826/https://hellosailor.neocities.org/portbanners.html"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Hello_Kitty_3" alt="Hello Kitty 3" class="MiniButton"></a>
+            <a><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Made_With_Affection" alt="Button: Made with affection"></a>
+            <a target="_blank" href="https://plasticdino.neocities.org/graphics"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Mamegoma" alt="Button: Mamegoma"></a>
+            <a target="_blank" href="/Graphics"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/My_Button_Chocola" alt="Button: Chocola"></a>
+            <a target="_blank" href="https://aquariumaesthetic.com/site/freebies.html"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Powered_by_Coffee" alt="Button: Powered by Coffee"></a>
+            <a target="_blank" href="/Graphics"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/My_Button_Kyu_Kurarin" alt="Button: Kyu-Kurarin"></a>
+            <a target="_blank" href="https://zanarkand.neocities.org/withlove.html"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Dumbass_Webmaster" alt="Button: Dumbass Webmaster Ahead"></a>
+            <a target="_blank" href="/Graphics"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/My_Button_Parfait_Cookie" alt="Button: Parfait Cookie"></a>
+            <a target="_blank" href="https://zanarkand.neocities.org/home.html"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Bookmark_This_Page_Now" alt="Button: Bookmark This Page Now"></a>
+            <a target="_blank" href="https://jubiland.neocities.org/sozai"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Bunny_and_Girl" alt="Bunny and Girl" class="MiniButton"></a>
+            <a target="_blank" href="https://www.tumblr.com/elysiansugar/747735738202963968"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Miku" alt="Miku" class="MiniButton"></a>
+            <a target="_blank" href="https://jubiland.neocities.org/sozai"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Ribbon" alt="Ribbon" class="MiniButton"></a>
+            <a target="_blank" href="https://caitsith.neocities.org/graphics1"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_I_Love_Himejoshis" alt="I Love Himejoshis" class="MiniButton"></a>
+            <a target="_blank" href="https://jubiland.neocities.org/sozai"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Crane_Game" alt="Crane Game" class="MiniButton"></a>
+            <a target="_blank" href="https://zanarkand.neocities.org/withlove.html"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Part_of_Neocities" alt="Button: Part of Neocities"></a>
+            <a target="_blank" href="https://web.archive.org/web/20231026133232/https://lhfm.neocities.org/buttons"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Teto" alt="Kasane Teto" class="MiniButton"></a>
+          </span>
+        <span>
+            <a target="_blank" href="https://web.archive.org/web/20220531232826/https://hellosailor.neocities.org/portbanners.html"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Hello_Kitty_3" alt="Hello Kitty 3" class="MiniButton"></a>
+            <a><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Made_With_Affection" alt="Button: Made with affection"></a>
+            <a target="_blank" href="https://plasticdino.neocities.org/graphics"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Mamegoma" alt="Button: Mamegoma"></a>
+            <a target="_blank" href="/Graphics"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/My_Button_Chocola" alt="Button: Chocola"></a>
+            <a target="_blank" href="https://aquariumaesthetic.com/site/freebies.html"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Powered_by_Coffee" alt="Button: Powered by Coffee"></a>
+            <a target="_blank" href="/Graphics"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/My_Button_Kyu_Kurarin" alt="Button: Kyu-Kurarin"></a>
+            <a target="_blank" href="https://zanarkand.neocities.org/withlove.html"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Dumbass_Webmaster" alt="Button: Dumbass Webmaster Ahead"></a>
+            <a target="_blank" href="/Graphics"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/My_Button_Parfait_Cookie" alt="Button: Parfait Cookie"></a>
+            <a target="_blank" href="https://zanarkand.neocities.org/home.html"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Bookmark_This_Page_Now" alt="Button: Bookmark This Page Now"></a>
+          <a target="_blank" href="https://jubiland.neocities.org/sozai"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Bunny_and_Girl" alt="Bunny and Girl" class="MiniButton"></a>
+            <a target="_blank" href="https://www.tumblr.com/elysiansugar/747735738202963968"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Miku" alt="Miku" class="MiniButton"></a>
+            <a target="_blank" href="https://jubiland.neocities.org/sozai"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Ribbon" alt="Ribbon" class="MiniButton"></a>
+            <a target="_blank" href="https://caitsith.neocities.org/graphics1"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_I_Love_Himejoshis" alt="I Love Himejoshis" class="MiniButton"></a>
+            <a target="_blank" href="https://jubiland.neocities.org/sozai"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Crane_Game" alt="Crane Game" class="MiniButton"></a>
+            <a target="_blank" href="https://zanarkand.neocities.org/withlove.html"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Part_of_Neocities" alt="Button: Part of Neocities"></a>
+            <a target="_blank" href="https://web.archive.org/web/20231026133232/https://lhfm.neocities.org/buttons"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Button_Teto" alt="Kasane Teto" class="MiniButton"></a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div id="indexNeighbors" class="boxStyle">
+      <div class="SectionTab">
+				<img class="SectionIcon" src="/Decorations/DecoBubble.gif" alt=""> <div class="SectionTitle">Neighbors</div>
+				<div class="SectionButtonsDisplay">
+  				<div class="SectionButtons">-</div>
+					<div class="SectionButtons">□</div>
+					<div class="SectionButtons">x</div>
+				</div>
+			</div>
+      <div class="content">
+        <a href="https://toonilumi.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Toonilumi" class="siteButton" alt="Toonilumi Site Button"></a>
+        <a href="https://adilene.net" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Adilene_2" class="siteButton" alt="Adilene Site Button"></a>
+        <a href="https://allyratworld.com" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Allyrat" class="siteButton" alt="Allyrat Site Button"></a>
+        <a href="https://angeleyesprings.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_AngelEyeSprings" class="siteButton" alt="Angel Eye Springs Site Button"></a>
+        <a href="https://angelgarden.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Angel_Garden" class="siteButton" alt="Angel Garden Site Button"></a>
+        <a href="https://angelovin.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_angelovin" class="siteButton" alt="angelovin Site Button"></a>
+        <a href="https://applesayce.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Applesayce" class="siteButton" alt="Applesayce Site Button"></a>
+        <a href="https://aurorawho.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Aurorawho" class="siteButton" alt="Aurorawho Site Button"></a>
+        <a href="https://bechnokid.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Bechnokid" class="siteButton" alt="Bechnokid Site Button"></a>
+        <a href="https://betazz.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Betazz" class="siteButton" alt="Betazz Site Button"></a>
+        <a href="https://butt0n-z.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Butt0n-z" class="siteButton" alt="Butt0n-z Site Button"></a>
+        <a href="https://cinnamoelle.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Cinnamoelle" class="siteButton" alt="Cinnamoelle Site Button"></a>
+        <a href="https://comfort.kayla.care" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Comfort" class="siteButton" alt="Comfort Site Button"></a>
+        <a href="https://cybertenshii.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Cybertenshii" class="siteButton" alt="Cybertenshii Site Button"></a>
+        <a href="https://cybertomboy.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Cybertomboy" class="siteButton" alt="Cybertomboy Site Button"></a>
+        <a href="https://dawkie.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Dawkie" class="siteButton" alt="Dawkie Site Button"></a>
+        <a href="https://decodreams.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Decodreams" class="siteButton" alt="Decodreams Site Button"></a>
+        <a href="https://neocities.org/site/deerwx" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_DEERWX" class="siteButton" alt="DEERWX Site Button"></a>   
+        <a href="https://derangedyaoi.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_DerangedYaoi" class="siteButton" alt="DerangedYaoi Site Button"></a>   
+        <a href="https://digibun.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Digibun" class="siteButton" alt="Digibun Site Button"></a>
+        <a href="https://diluculo.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Diluculo" class="siteButton" alt="Dilucolo Site Button"></a>
+        <a href="https://dustbunnybedroom.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_DustBunnyBedroom" class="siteButton" alt="DustBunnyBedroom Site Button"></a>
+        <a href="https://estranged.nekoweb.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Estranged" class="siteButton" alt="Estranged Site Button"></a>
+        <a href="https://fairypink.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Fairypink" class="siteButton" alt="Fairypink Site Button"></a>
+        <a href="https://fairysite.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_FairySite" class="siteButton" alt="FairySite Site Button"></a>
+        <a href="https://ferdvonvestra.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_ferdvonvestra" class="siteButton" alt="ferdvonvestra Site Button"></a>
+        <a href="https://fishstew.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Fishstew" class="siteButton" alt="Fishstew Site Button"></a>
+        <a href="https://epicfranb.nekoweb.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_epicfranb" class="siteButton" alt="Franny Site Button"></a>
+        <a href="https://freshflesh.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_FreshFlesh" class="siteButton" alt="FreshFlesh Site Button"></a>
+        <a href="https://glassplanet.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Glass_Planet" class="siteButton" alt="Glass Planet Site Button"></a>
+		    <a href="https://hunipyon.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Hunipyon" class="siteButton" alt="Hunipyon Site Button"></a>
+		    <a href="https://hoaxfool.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Hoaxfool" class="siteButton" alt="Hoaxfool Site Button"></a>
+		    <a href="https://honeyedcharlatan.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_honeyedcharlatan" class="siteButton" alt="honeyedcharlatan Site Button"></a>
+        <a href="https://inkyblinkyarts.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Inkyblinkyarts" class="siteButton" alt="Inkyblinkyarts Site Button"></a>
+		    <a href="https://introvertedloser.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_IntrovertedLoser" class="siteButton" alt="IntrovertedLoser Site Button"></a>
+		    <a href="https://jeith.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Jeith" class="siteButton" alt="Jeith Site Button"></a>
+		    <a href="https://jubiland.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Jubiland" class="siteButton" alt="Jubiland Site Button"></a>
+		    <a href="https://killerbangs.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_killer_bangs" class="siteButton" alt="killer bangs Site Button"></a>
+		    <a href="https://klomfel.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Klomfel" class="siteButton" alt="Klomfel Site Button"></a>
+        <a href="https://LemonadeHammer.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_LemonadeHammer" class="siteButton" alt="LemonadeHammer Site Button"></a>
+        <a href="https://lizzzys-cave.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Lizzzys-Cave" class="siteButton" alt="Lizzzy's Cave Site Button"></a>
+        <a href="https://lockheartlove.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Lockheart_Love" class="siteButton" alt="Lockheart Love Site Button"></a>
+        <a href="https://lovesick.cafe" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Lovesick" class="siteButton" alt="Lovesick Site Button"></a>
+		    <a href="https://kwaamfan.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Kwaamfan" class="siteButton" alt="Kwaamfan Site Button"></a>
+        <a href="https://magnapina.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Magnapina" class="siteButton" alt="Magnapina Site Button"></a>
+        <a href="https://mavisdeluna.art" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_The_Moon_Palace" class="siteButton" alt="The Moon Palace Site Button"></a>
+        <a href="https://melody-nomas.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_melody-nomas" class="siteButton" alt="melody-nomas Site Button"></a>
+        <a href="https://mewchara.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Mewchara" class="siteButton" alt="Mewchara Site Button"></a>
+        <a href="https://mikufan3939.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Mikufan" class="siteButton" alt="Mikufan3939 Site Button"></a>
+        <a href="https://moeghosts.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_moeghosts" class="siteButton" alt="moeghosts Site Button"></a>
+        <a href="https://moonlit-blossom.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Moonlit_Blossom" class="siteButton" alt="Moonlit-Blossom Site Button"></a>
+        <a href="https://mualani.neocities.org/" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Mualani" class="siteButton" alt="Mualani Site Button"></a>
+        <a href="https://myblace.one" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_MyBlace" class="siteButton" alt="MyBlace Site Button"></a>
+        <a href="https://nothingspecial.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_NothingSpecial" class="siteButton" alt="Nothingspecial Site Button"></a>
+        <a href="https://nomnomnami.com" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Nomnomnami" class="siteButton" alt="Nomnomnami Site Button"></a>
+        <a href="https://nyaa.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Nyaa" class="siteButton" alt="Nyaa Site Button"></a>
+        <a href="https://oaaky.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Oaaky" class="siteButton" alt="Oaaky Site Button"></a>
+        <a href="https://ordainedmotion.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Ordainedmotion" class="siteButton" alt="Ordainedmotion Site Button"></a>
+        <a href="https://oyasumimi.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_oyasumimi" class="siteButton" alt="oyasumimi Site Button"></a>
+        <a href="https://philia995.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_philia995" class="siteButton" alt="philia995 Site Button"></a>
+        <a href="https://pinkfiremage.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_PinkFireMage" class="siteButton" alt="PINKFIREMAGE Delights Site Button"></a>
+        <a href="https://pizzacatdelights.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_PizzacatDelights" class="siteButton" alt="Pizzacat Delights Site Button"></a>
+        <a href="https://pomelo.lol" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Pomelo" class="siteButton" alt="Pomelo Site Button"></a>
+        <a href="https://prismatictigers.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_PrismaticTigers" class="siteButton" alt="PrismaticTigers Site Button"></a>
+        <a href="https://ratteta.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Ratteta" class="siteButton" alt="Ratteta Site Button"></a>
+        <a href="https://razzpixel.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Razzpixel" class="siteButton" alt="Razzpixel Site Button"></a>
+        <a href="https://re-nata.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_re-nata" class="siteButton" alt="Re-Nata Site Button"></a>
+        <a href="https://rhinedottir.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Rhinedottir" class="siteButton" alt="Rhinedottir Site Button"></a>
+        <a href="https://ruili.neocities.org/" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Ruili" class="siteButton" alt="Ruili Site Button"></a>
+        <a href="https://sanguineroyal.com" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_SanguineRoyal" class="siteButton" alt="SanguineRoyal Site Button"></a>
+        <a href="https://scythe.nekoweb.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Scythe" class="siteButton" alt="Scythe Site Button"></a>
+        <a href="https://schelofthesea.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_ScheloftheSea" class="siteButton" alt="ScheloftheSea Site Button"></a>
+        <a href="https://seashrine.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Seashrine" class="siteButton" alt="Seashrine Site Button"></a>
+        <a href="https://sephiria.com" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Sephiria" class="siteButton" alt="Sephiria Site Button"></a>
+        <a href="https://seraphim.nekoweb.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Seraphim" class="siteButton" alt="Seraphim Site Button"></a>
+          <a href="https://slushiecafe.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_SlushieCafe" class="siteButton" alt="SlushieCafe Site Button"></a>
+        <a href="https://starlost.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_Starlost" class="siteButton" alt="Starlost Site Button"></a>
+        <a href="http://superkirbylover.me" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_SuperKirbyLover" class="siteButton" alt="SuperKirbyLover Site Button"></a>
+        <a href="https://v19.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_V19" class="siteButton" alt="v19 Site Button"></a>
+        <a href="https://velvetblue.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_VelvetBlue" class="siteButton" alt="Velvet Blue Site Button"></a>
+        <a href="https://velvetlori.neocities.org" target="_blank"><img src="https://file.garden/ZRd9Ymec0nPTUKfu/Buttons/Site_VelvetLori" class="siteButton" alt="VelvetLori Site Button"></a>
+      </div>
+    </div> 
+    <div id="indexWebrings" class="boxStyle">
+      <div class="SectionTab">
+				<img class="SectionIcon" src="/Decorations/DecoBubble.gif" alt=""> <div class="SectionTitle">Webrings</div>
+				<div class="SectionButtonsDisplay">
+  				<div class="SectionButtons">-</div>
+					<div class="SectionButtons">□</div>
+					<div class="SectionButtons">x</div>
+				</div>
+			</div>
+			<div class="content">
+          <!--RPG Maker Webring -->
+          <div id='RPGMaker'>
+            <script src="https://mal.ophanimkei.com/onionring-variables.js"></script>
+            <script src="https://mal.ophanimkei.com/onionring-widget.js"></script>
+          </div>
+          <!--Neocreatives Webring -->
+          <div id='ncring'>
+            <script type="text/javascript" src="https://neocreatives.neocities.org/onionring-variables.js"></script>
+            <script type="text/javascript" src="Scripts/neocreatives.js"></script>
+          </div>                                
+          <!--Women of the Internet Webring -->
+          <div id='women-web'>
+            <script type="text/javascript" src="https://womenoftheinternet.neocities.org/files/onionring-variables.js"></script>
+            <script type="text/javascript" src="Scripts/woti.js"></script>
+          </div>
+          <!--Cookie Run Webring -->
+          <div id="ckwr">
+            <script type="text/javascript" src="https://evehibi.nekoweb.org/ckwr/var.js"></script>
+            <script type="text/javascript" src="https://evehibi.nekoweb.org/ckwr/widget.js"></script>
+            <link rel="stylesheet" href="https://evehibi.nekoweb.org/ckwr/widget.css">
+          </div>
+          <!--Vocaloid Webring -->
+		      <div id="vocaring" style="margin-top: 10px;">
+		        <script src="Scripts/vocaring.js"></script>
+		      </div>
+		      <br>
+          <!--Self-Insert Webring -->        
+          <div id="selfinsertwebring" style="margin-top: 10px;">
+            <script src="Scripts/showWebring.js"></script>
+          </div>
+          <!-- End -->
+      </div>
+    </div>
+  </div>
+  <div id="footer" class="boxStyle">
+    <p>© Lazer-Bunny <span id="year"></span> • Coded With Love </p>
+    <script>
+    function copyrightYear(startYear) {
+      const d = new Date();
+      let y = d.getFullYear();
+      const year = document.getElementById("year");
+      year.innerHTML = startYear;
+      if (y != startYear) {
+        year.innerHTML += "-" + y;
+      }
+    }
+    copyrightYear(2022);
+    </script>
+  </div>
+</div>
+  <br>
 </body>
 </html>
