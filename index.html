@@ -1,114 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Annie Spade | Social Media Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    body {
-      background-color: #fff0f6;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      background-image: url('https://i.ibb.co/MBC4Jmn/heart-diamond-lrg-pink.png');
-      background-repeat: repeat;
-    }
-    .pink-block {
-      background-color: #ffd6e8;
-      width: 60vw;
-      margin: auto;
-      margin-top: 5vh;
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(255, 182, 193, 0.5);
-    }
-    .lace-top {
-      background-image: url('https://i.imgur.com/uQAG2HS.png');
-      background-repeat: repeat-x;
-      background-size: auto 100%;
-      height: 85px;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    .lace-bottom-left {
-      position: absolute;
-      bottom: -150px;
-      left: 285px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .lace-bottom-left img {
-      height: 45px;
-      object-fit: contain;
-    }
-    .social-text p {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: 'Courier New', monospace;
-      font-size: 14px;
-      color: #d63384;
-      line-height: 1.2;
+      padding: 0;
     }
-    .annie-banner {
-      width: 70%;
-      margin: 0 auto 235px auto;
-      transform: translateY(-235px);
-      padding: 25px;
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #f8f8f8;
+      padding: 20px;
       text-align: center;
-      border-bottom: 2px solid #ffcce6;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      background-image: url('https://lovesick.cafe/img/pink-white-diamond-bg.png');
-      background-repeat: repeat;
-      background-position: center;
-      background-size: auto;
-      border-radius: 12px;
+      border-bottom: 1px solid #ddd;
     }
-    .annie-banner h1 {
-      margin: 10px;
-      font-family: 'Dancing Script', cursive;
-      font-size: 54px;
-      color: #fda4ba;
-    }
-    h2 {
+    header h1 {
+      font-size: 2.2rem;
       color: #c9184a;
     }
-    .section {
-      margin-bottom: 2rem;
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 15px;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+    }
+    nav a {
+      text-decoration: none;
+      color: #c9184a;
+      font-weight: 600;
+    }
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 10px;
+      color: #c9184a;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+    }
+    input, textarea, button {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #c9184a;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    button:hover {
+      background-color: #a01338;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f1f1f1;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.75rem;
+      }
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="lace-top"></div>
-  <div class="pink-block">
-    <div class="annie-banner">
-      <h1>Annie Spade</h1>
-    </div>
+  <header>
+    <h1>Annie Spade</h1>
+    <p>Social Media Strategist | Content Creator | Consultant</p>
+  </header>
 
-    <div class="section">
-      <h2>📸 Content Creation</h2>
-      <p><strong>In-Person Content Creation:</strong> From brainstorm to viral — I’ll help you craft your vision, shoot, and edit it in person. Perfect for creators and brands who want hands-on creative direction.</p>
-      <p><strong>Post Refinement:</strong> Have content already? Let me edit and refine it into something optimized, eye-catching, and scroll-stopping — perfect for TikTok, IG, and YouTube Shorts.</p>
-    </div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <div class="section">
-      <h2>🧠 Strategy + Consulting</h2>
-      <p><strong>Basic Overview:</strong> A one-time audit of your account with clear feedback on what’s working, what’s not, and how to grow fast — no fluff.</p>
-      <p><strong>Content Planning:</strong> A full strategy with written-out video ideas, hooks, captions, and aesthetic planning tailored to your niche and goals.</p>
-    </div>
+  <div class="container">
+    <section id="services">
+      <h2>Services</h2>
+      <p><strong>Content Creation:</strong> Full-service content creation including brainstorming, filming, editing, and publishing assistance. Perfect for individuals and brands who need hands-on help to bring their vision to life.</p>
+      <p><strong>Post Refinement:</strong> Already created content? I’ll refine it to maximize impact and algorithm performance.</p>
+      <p><strong>Strategy + Consulting:</strong></p>
+      <ul>
+        <li><strong>Basic Overview:</strong> Account audit with specific recommendations for improving content, reach, and brand clarity.</li>
+        <li><strong>Content Planning:</strong> Receive a detailed, written content plan tailored to your goals and audience.</li>
+      </ul>
+    </section>
 
-    <div class="section">
-      <h2>💼 Portfolio</h2>
-      <p>Explore my work across TikTok, YouTube, and brand collabs — all under the Annie Spade persona. Coming soon: live portfolio links and client case studies.</p>
-    </div>
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <p>Coming soon — a curated collection of viral content, brand collaborations, and refined social strategies. All work under the Annie Spade identity.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form action="mailto:anniespademgmt@gmail.com" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
   </div>
 
-  <div class="lace-bottom-left">
-    <img src="https://lovesick.cafe/img/sozai/lovesick-set/ls-bg02.png" alt="lace" />
-    <div class="social-text">
-      <p>let's stay in touch!<br>
-      IG: anniespademusic<br>
-      TikTok: anniespade</p>
-    </div>
-  </div>
+  <footer>
+    <p>&copy; 2025 Annie Spade. All rights reserved.</p>
+  </footer>
 </body>
 </html>
 
