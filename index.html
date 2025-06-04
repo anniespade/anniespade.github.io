@@ -19,9 +19,16 @@
     }
     header {
       background-color: #f8f8f8;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
       border-bottom: 1px solid #ddd;
+    }
+    header img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
     }
     header h1 {
       font-size: 2.2rem;
@@ -39,6 +46,35 @@
       text-decoration: none;
       color: #c9184a;
       font-weight: 600;
+    }
+    .banner {
+      width: 60%;
+      max-width: 60%;
+      margin: 20px auto;
+      text-align: center;
+    }
+    .banner-text {
+      font-size: 1.2rem;
+      color: #c9184a;
+      font-weight: 600;
+      margin-bottom: 10px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-in-out forwards;
+    }
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     .container {
       max-width: 960px;
@@ -93,11 +129,16 @@
         flex-direction: column;
         align-items: center;
       }
+      .banner {
+        width: 90%;
+        max-width: 90%;
+      }
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="IMG_6293.jpg" alt="Annie Spade Headshot" />
     <h1>Annie Spade</h1>
     <p>Social Media Strategist | Content Creator | Consultant</p>
   </header>
@@ -108,22 +149,77 @@
     <a href="#contact">Contact</a>
   </nav>
 
+  <div class="banner">
+    <div class="banner-text">You want these numbers? Let’s make it happen.</div>
+    <img src="DB494566-06B7-4B80-BCFC-0076F8139506.JPEG" alt="Results Banner" />
+  </div>
+
   <div class="container">
     <section id="services">
       <h2>Services</h2>
-      <p><strong>Content Creation:</strong> Full-service content creation including brainstorming, filming, editing, and publishing assistance. Perfect for individuals and brands who need hands-on help to bring their vision to life.</p>
-      <p><strong>Post Refinement:</strong> Already created content? I’ll refine it to maximize impact and algorithm performance.</p>
-      <p><strong>Strategy + Consulting:</strong></p>
-      <ul>
-        <li><strong>Basic Overview:</strong> Account audit with specific recommendations for improving content, reach, and brand clarity.</li>
-        <li><strong>Content Planning:</strong> Receive a detailed, written content plan tailored to your goals and audience.</li>
+      <p><strong>Strategy Consulting:</strong> Basic Overview- Account audit with specific recommendations for improving content, reach, and brand clarity. This is a one-time look over your account, you recive in-depth advice about how to improve your content. <strong>Also offers: Content Planning:</strong> Receive a detailed, written content plan tailored to your goals and audience.</li>
+      <p><strong>Editing:</strong> Already created content? I’ll EDIT and refine it to maximize impact and algorithm performance.</p>		  
+      <p><strong>Content Creation(Boston, MA):</strong> Full-service content creation including brainstorming, filming, editing, and publishing assistance. Perfect for individuals and brands who need hands-on help to bring their vision to life. (Only available in Boston through August)</p>
+
+
       </ul>
     </section>
 
-    <section id="portfolio">
-      <h2>Portfolio</h2>
-      <p>Coming soon — a curated collection of viral content, brand collaborations, and refined social strategies. All work under the Annie Spade identity.</p>
+    <section id="pricing">
+  <h2>Pricing</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+    <div>
+      <h3 style="color: #c9184a; font-size: 1.3rem; margin-bottom: 10px;">Strategy Consulting</h3>
+      <ul>
+        <li><strong>Basic Overview:</strong> Audit → <strong>$150–$250</strong></li>
+        <li><strong>Content Plan:</strong> 4–8 videos → <strong>$400–$600</strong></li>
+        <li><strong>Monthly Support:</strong> Zoom + DM → <strong>$750–$1,200</strong></li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="color: #c9184a; font-size: 1.3rem; margin-bottom: 10px;">Editing</h3>
+      <ul>
+        <li><strong>Single Edit:</strong> Up to 60s → <strong>$75–$125</strong></li>
+        <li><strong>3-Pack Bundle:</strong> <strong>$200–$300</strong></li>
+        <li><strong>10 Video Batch:</strong> <strong>$600+</strong></li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="color: #c9184a; font-size: 1.3rem; margin-bottom: 10px;">Content Creation</h3>
+      <ul>
+        <li><strong>Mini Session:</strong> 1–2 hours → <strong>$250–$400</strong></li>
+        <li><strong>Half-Day:</strong> 3–4 hours → <strong>$500–$750</strong></li>
+        <li><strong>Full-Day:</strong> 6–8 hours → <strong>$900–$1,200</strong></li>
+        <li><strong>Monthly Retainer:</strong> 4 shoots → <strong>$2,500+</strong></li>
+      </ul>
+      </div> <!-- closes the pricing grid -->
     </section>
+<section id="portfolio">
+  <h2>Portfolio</h2>
+  <p>A curated collection of viral content, brand collaborations, and refined social strategies.</p>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 20px; justify-content: center;">
+
+    <!-- TikTok Preview -->
+    <div style="flex: 1 1 280px; max-width: 400px; border: 1px solid #eee; border-radius: 12px; padding: 15px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+      <h3 style="color: #c9184a; margin-bottom: 10px;">TikTok: @anniespade</h3>
+      <a href="https://www.tiktok.com/@anniespade?lang=en" target="_blank" style="text-decoration: none; color: inherit;">
+        <img src="Screenshot 2025-06-04 at 1.32.44 PM.png" alt="Annie Spade TikTok Preview" style="width: 100%; border-radius: 10px;" />
+        <p style="margin-top: 10px; color: #c9184a; font-weight: 600;">View TikTok Profile</p>
+      </a>
+    </div>
+
+    <!-- Instagram Preview -->
+    <div style="flex: 1 1 280px; max-width: 400px; border: 1px solid #eee; border-radius: 12px; padding: 15px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+      <h3 style="color: #c9184a; margin-bottom: 10px;">Instagram: @tyler_harmon_music</h3>
+      <a href="https://www.instagram.com/tyler_harmon_music/reels/" target="_blank" style="text-decoration: none; color: inherit;">
+        <img src="Screenshot 2025-06-04 at 1.32.56 PM.png" alt="Tyler Harmon Instagram Preview" style="width: 100%; border-radius: 10px;" />
+        <p style="margin-top: 10px; color: #c9184a; font-weight: 600;">View Instagram Reels</p>
+      </a>
+    </div>
+
+  </div>
+</section>
 
     <section id="contact">
       <h2>Contact</h2>
@@ -141,5 +237,3 @@
   </footer>
 </body>
 </html>
-
-
