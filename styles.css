@@ -14,6 +14,16 @@
   html,body{height:100%}
   body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);overflow-x:hidden}
   .noise{pointer-events:none;position:fixed;inset:0;mix-blend-mode:overlay}
+
+  /* Pixel Pet UI (place AFTER your main block) */
+.pet-bars{display:grid;gap:8px;margin:8px 0 12px}
+.bar{position:relative;height:14px;background:#efe8f6;border:2px solid #fff;outline:2px solid rgba(0,0,0,.08);border-radius:6px;box-shadow:inset 0 -2px 0 rgba(0,0,0,.05)}
+.bar span{position:absolute;left:8px;top:-18px;font-size:11px;color:#7b6d88;font-weight:700}
+.bar-fill{height:100%;border-radius:4px;transition:width .25s ease}
+
+.pet-controls{display:flex;gap:10px;justify-content:center;margin-top:10px;flex-wrap:wrap}
+#pet{display:block;margin:0 auto;border:6px solid #fff;outline:2px solid rgba(0,0,0,.08);border-radius:10px;box-shadow:6px 6px 0 #ebd3c7}
+
   
   /* ===== Background (lavender grid, like the mock) ===== */
   .pink-bg{
@@ -131,3 +141,4 @@
   /* cursor vibes */
   body{cursor:default}
   .input-row .enter-btn.window-btn{cursor:pointer}
+
